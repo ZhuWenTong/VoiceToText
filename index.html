@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/loading.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <title>VoiceToText</title>
+</head>
+<body>
+    <div class="title">
+        <p class="border-b txt">竞价记录</p>
+    </div>
+    <div class="project flex-row-between border-b">
+        <p>项目名称</p>
+        <p>测试地块XXX(招拍挂)</p>
+    </div>
+    <div class="list">
+        <!-- <div class="item border-b">
+            <span>1</span>
+            <span>时代</span>
+            <span>竞亩价</span>
+            <span>111 (万元/亩)</span>
+            <span><i class="iconfont icon-delete"></i></span>
+        </div> -->
+    </div>
+    <div class="options">
+        <div class="item flex-row-between border-b">
+            <span>竞拍方式</span>
+            <input type="text" value="竞亩价" id="optionType">
+        </div>
+        <div class="item flex-row-between border-b">
+            <span>出价企业</span>
+            <input type="text" id="CorpName" />
+        </div>
+        <div class="item flex-row-between border-b">
+            <span>出价金额</span>
+            <input type="text" id="price" />
+        </div>
+    </div>
+    <div class="btn">
+        <button class="submit">出价</button>
+    </div>
+    <div class="mic">
+        <i class="iconfont icon-mic" id="mic-btn"></i>
+    </div>
+    <div class="mask">
+        <div class="loader">
+            <div class="loader-inner line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p>松开手指结束录入</p>
+        </div>
+    </div>
+    <div class="tips">
+        <p></p>
+    </div>
+    <div class="loading">
+        <div class="loader">
+            <div class="loader-inner ball-scale-ripple-multiple">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/zepto.js"></script>
+    <script src="./js/zepto.touch.js"></script>
+    <script src="./js/recorder-core.js"></script>
+    <script src="./js/wav.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
