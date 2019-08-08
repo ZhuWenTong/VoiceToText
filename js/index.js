@@ -1,16 +1,13 @@
 $(document).ready(function () {
     new VoiceToText()
 })
-function RandomKey () {
-    return 'randomkey' + (RandomKey.idx++)
-}
-RandomKey.idx = 0
 class VoiceToText {
     constructor () {
         this.rec = null
         this.recblob = {}
         this.recId = ''
         this.isMic = true
+        this.idx = 0
         this.init()
     }
     // 初始化
@@ -113,7 +110,7 @@ class VoiceToText {
         return new Promise((resolve, reject) => {
             if (rec) {
                 rec.stop(function (blob, time) {
-                    let id = RandomKey()
+                    let id = _this.randomKey()
                     recblob[id] = { blob: blob, set: $.extend({}, rec.set), time: time }
                     _this.recId = id
                     resolve(_this)
@@ -148,6 +145,10 @@ class VoiceToText {
                 }
             })
         })
+    }
+    // 音频id
+    randomKey () {
+        return 'randomkey' + (this.idx++)
     }
     // 渲染
     renderList () {
